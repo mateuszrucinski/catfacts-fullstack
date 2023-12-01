@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatFacts</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app" class="whole-app">
+        <div class="container">
+            <div class="top">
+                <div class="title">{{ title }}</div>
+                </div>
+            <div class="content">
+                <div class="header-text">
+                    <p>Podaj ile chcesz faktow o kotach:</p>
+                </div>
+                <div class="input">
+                    <div class="text-bar">
+                        <input v-model="number" placeholder="Podaj liczbe">
+                    </div>
+                    <div class="button">
+                        <button @click="getFacts">Ok</button>
+                    </div>
+                </div>
+                <div class="output-text">
+                  {{ text }}
+                </div>
+                <div></div>
+            </div>
+            <div class="footer">    
+                <img v-bind:src="image"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import App -->
+    <script src="./script.js"></script>
+
+    <!-- Mount app -->
+    <!-- ustawia kod js do divu o id 'app' -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* zmienne globalne: */
+:root {
+  --background-colour: #BF9F8d;
+}
+
+.whole-app {
+  border: 3px solid #000;
+  display: grid;
+  max-height: 600px;
+  height: 600px;
+  grid-template-columns: 3fr 2fr 3fr;
+  grid-template-areas:
+  "empty1 app empty2"
+
+}
+
+.container {
+  background: var(--background-colour);
+  grid-area: app;
+  max-height: 600px;
+  height: 600px;
+  display: grid;
+  /* grid-template-rows: 100px 100px 100px; */
+  grid-template-rows: 1fr 3fr 1fr;
+  justify-items: stretch;
+  grid-template-areas:
+  "top" 
+  "content" 
+  "footer";
+}
+
+.top {
+  grid-area: top;
+  color: #413030;
+  font-size: 60px;
+  font-family: Jomhuria;
+  font-weight: 400;
+  word-wrap: break-word;
+  /* text-align: start; */
+  justify-self: center;
+  align-self: self-start;
+  align-items: self-start;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.header-text {
+  color: #413030;
+  font-size: 18px;
+  font-family: Jomhuria;
+  font-weight: 300;
+  text-align: center;
+  align-self: self-start;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.output-text {
+  padding: 20px;
+  text-align: justify;
+}
+
+.footer > img {
+  object-fit: contain;
+  max-width: 25%;
+  max-height: 100%;
+}
